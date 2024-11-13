@@ -9,7 +9,8 @@ case "$name" in
 		echo "You are Super admin :D"
 	;;	
         *)
-	  echo"You are not Authorized!"
+	  echo "You are not Authorized!"
+	  exit
 esac  	  
 sleep 5
 clear 
