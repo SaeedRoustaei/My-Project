@@ -6,7 +6,10 @@ case "$name" in
 		echo "you are authorized"
 	;;
         "Amir")
-		echo "You are Super admin :D"
+		echo "You are Super admin"
+	;;
+        "Saeed")
+		echo " You are authorized"
 	;;	
         *)
 	  echo "You are not Authorized!"
@@ -17,7 +20,7 @@ clear
 read -p " please enter a directory: " directory
 if [ -d "/$directory" ];then
 	echo "Directory is availble"
-        find / -name $directory -type d 2>/dev/null
+        find /$directory -name $directory -type d 2>/dev/null
 else
 	echo -e  " Directory not found \nDo you want to create $directory ?(y/n)"
 	read answer
