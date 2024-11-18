@@ -1,15 +1,22 @@
 #!/bin/bash
 clear
-read -p "Please Enter a name:" name
+read -p "Username:" name
 case "$name" in
 	"Mahdi")
-		echo "you are authorized"
+		read -s -p "Password: " pass
+		while [ ${#pass} -lt 8 ];do
+			echo -e "Password character must be more than 8!\nPassword: "
+	                read -s  pass
+		  done     	
+		echo -e "\nYou are authorized"
 	;;
         "Amir")
-		echo "You are Super admin"
+                read -s -p "Password: " pass
+		echo -e "\nYou are authorized"
 	;;
         "Saeed")
-		echo " You are authorized"
+		read -s -p "Password: " pass
+		echo -e "\nYou are authorized"
 	;;	
         *)
 	  echo "You are not Authorized!"
