@@ -1,4 +1,5 @@
 #!/bin/bash
+# Agha Saeed
 clear
 read -p "Username:" name
 case "$name" in
